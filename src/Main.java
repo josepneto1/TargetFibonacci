@@ -2,18 +2,15 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Informe um número para verificar se pertence a sequência de Fibonacci:");
+        int[] numeros = {5, 12, 8, 90, 34, 55, 71};
 
-        int num = sc.nextInt();
-
-        if (verificarFibonacci(num)) {
-            System.out.println(num + " pertence a sequência de Fibonacci");
-        } else {
-            System.out.println(num + " NÃO pertence a sequência de Fibonacci");
+        for (int num : numeros) {
+            if (verificarFibonacci(num)) {
+                System.out.println(num + " pertence a sequência de Fibonacci");
+            } else {
+                System.out.println(num + " NÃO pertence a sequência de Fibonacci");
+            }
         }
-
-        sc.close();
     }
 
     public static boolean verificarFibonacci(int num) {
